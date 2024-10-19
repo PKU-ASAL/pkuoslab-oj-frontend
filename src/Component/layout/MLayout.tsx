@@ -42,10 +42,11 @@ class MLayout extends Component<any, any> {
                 <LoginCheck jump={true}/>
                 <Layout style={{height: "max-content", minHeight: "100%"}}>
                     <Sider theme="dark" style={{position: 'fixed', zIndex: 50, height: '100vh', overflow: "auto"}}>
-                        <div className="logo">
-                            <img src={logo} style={{width: "125px", height: '30px'}}
-                                 alt={"SDUOJ-logo"}/>
-                        </div>
+                        {/* HRZ: 删除导航栏上的logo */}
+                        {/*<div className="logo">*/}
+                        {/*    <img src={logo} style={{width: "125px", height: '30px'}}*/}
+                        {/*         alt={"SDUOJ-logo"}/>*/}
+                        {/*</div>*/}
                         <MMenu id={1} roles={["superadmin"]}/>
                     </Sider>
                     <Layout style={{minWidth: 1200, marginLeft: 200}}>

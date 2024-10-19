@@ -9,6 +9,7 @@ import SDU_Logo from "../../Assert/img/sdu-logo.jpg";
 import Register from "../../Component/user/Form/Register";
 import Binding from "../../Component/user/Form/Binding";
 import {UrlPrefix} from "../../Config/constValue";
+import {homeURL, routerC_M} from "../../Config/router/routerC";
 
 
 class CThirdPartyLogin extends Component<any, any> {
@@ -47,7 +48,7 @@ class CThirdPartyLogin extends Component<any, any> {
                 }
                 this.setState(obj)
             } else {
-                this.props.history.push(UrlPrefix + "/home")
+                this.props.history.push(homeURL(routerC_M))
             }
         })
     }

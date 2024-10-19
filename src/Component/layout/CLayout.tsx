@@ -11,6 +11,7 @@ import {routerC} from "../../Config/router/routerC";
 import {ContestState} from "../../Redux/Action/contest";
 import {UrlPrefix} from "../../Config/constValue";
 import LoginCheck from "../common/LoginCheck";
+import {homeURL, routerC_M} from "../../Config/router/routerC";
 
 const {Content} = Layout;
 
@@ -18,7 +19,7 @@ class MLayout extends Component<any, any> {
 
     componentDidMount() {
         if (this.props.location.pathname === UrlPrefix || this.props.location.pathname === UrlPrefix + '/') {
-            this.props.history.push(UrlPrefix + "/home");
+            this.props.history.push(homeURL(routerC_M));
         }
     }
 

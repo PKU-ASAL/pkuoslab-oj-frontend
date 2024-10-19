@@ -8,11 +8,11 @@ import {store} from "./Redux/Store";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  // <React.StrictMode>
+  <React.StrictMode>
      <Provider store={store}>
         <App/>
      </Provider>,
-   // </React.StrictMode>,
+   </React.StrictMode>,
   document.getElementById('root')
 );
 

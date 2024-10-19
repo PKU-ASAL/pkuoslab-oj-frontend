@@ -17,10 +17,11 @@ const EHeader = (props: any) => {
     // const dispatch = useDispatch()
     return (
         <Header className="site-layout-sub-header-background" style={{minWidth: 550}}>
-            <div className="logo" style={{float: "left", marginTop: "-5px", marginLeft: "-10px"}} key={"logo"}>
-                <img src={logo} style={{width: "125px", height: '30px'}}
-                     alt={"SDUOJ-logo"}/>
-            </div>
+            {/*HRZ：删除导航栏上的logo*/}
+            {/*<div className="logo" style={{float: "left", marginTop: "-5px", marginLeft: "-10px"}} key={"logo"}>*/}
+            {/*    <img src={logo} style={{width: "125px", height: '30px'}}*/}
+            {/*         alt={"SDUOJ-logo"}/>*/}
+            {/*</div>*/}
             <div style={{float: "right"}} key={"operator"}>
                 {props.location.pathname.match(/\/exam\/running\//) !== null && (
                     <ExamOver key={"ExamOver"}/>

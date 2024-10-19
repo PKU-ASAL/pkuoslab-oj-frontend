@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {withRouter} from "react-router-dom";
 import {UrlPrefix} from "../../Config/constValue";
 import cApi from "Utils/API/c-api";
+import {homeURL,routerC_M} from "../../Config/router/routerC";
 
 const TimeError = (props: any) => {
 
@@ -50,7 +51,7 @@ const TimeError = (props: any) => {
                                         type="primary"
                                         key="return"
                                         onClick={() => {
-                                            props.history.replace(UrlPrefix + "/home")
+                                            props.history.replace(homeURL(routerC_M))
                                         }}
                                     >
                                         返回主页
@@ -62,7 +63,7 @@ const TimeError = (props: any) => {
                         return (
                             <Result
                                 status="warning"
-                                title="您的系统时间有误，这会影响 SDUOJ 系统的工作，请您更正当前系统时间。"
+                                title={"您的系统时间有误，这会影响 PKU-OSLAB OJ 系统的工作，请您更正当前系统时间。"/*HRZ:修改名字*/}
                                 subTitle={
                                     <>
                                         <span>系统时间：{unix2Time(sysTime)}</span> <br/>

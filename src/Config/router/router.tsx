@@ -1,7 +1,8 @@
 import {lazy} from "react";
 import {UrlPrefix} from "../constValue";
 
-
+//HRZ：要禁用某些模块，可以先从这里把相应的路由给删掉，routerC.tsx, routerE.tsx, routerM.tsx也有相应的路由
+//不需要的全删掉
 export interface IBaseRouter {
     id: number
     path: string
@@ -18,22 +19,22 @@ export interface IRouter extends IBaseRouter {
 
 // 名称，是否为独立页面
 const routerCLayoutData: any = [
-    ["home", false],
+    // ["home", false],
     ["problem", false],
-    ["contest", false],
-    ["problemSet", false],
-    ["problemSetPublic", false],
+    // ["contest", false],
+    // ["problemSet", false],
+    // ["problemSetPublic", false],
     ["submission", false],
-    ["group", false],
+    // ["group", false],
     // 用户信息页面
     ["user", true],
     // 账户相关的单独页面
     ["login", true],
-    ["thirdPartyLogin", true],
+    // ["thirdPartyLogin", true],
     ["resetpass", true],
-    ["test", false],
-    ["hws", false],
-    ["studentMutualEvaluation", true]
+    // ["test", false],
+    // ["hws", false],
+    // ["studentMutualEvaluation", true]
 ]
 let routerCLayout: IBaseRouter[] = []
 let num = 100;
@@ -56,15 +57,15 @@ export const routerLayout: IBaseRouter[] = [
         exact: false,
         component: lazy(() => import('../../Component/layout/MLayout'))
     },
-    {
-        id: 1,
-        path: UrlPrefix + "/exam",
-        exact: false,
-        component: lazy(() => import('../../Component/layout/ELayout'))
-    },
+    // {
+    //     id: 1,
+    //     path: UrlPrefix + "/exam",
+    //     exact: false,
+    //     component: lazy(() => import('../../Component/layout/ELayout'))
+    // },
     {
         id: 4,
-        path: UrlPrefix,
+        path: UrlPrefix + '/',
         exact: true,
         component: lazy(() => import('../../Component/layout/CLayout'))
     },

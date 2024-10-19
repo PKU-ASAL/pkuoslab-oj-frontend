@@ -1,6 +1,7 @@
 import {Button, Result} from "antd";
 import {withRouter} from "react-router-dom";
 import {UrlPrefix} from "../../Config/constValue";
+import {homeURL, routerC_M} from "../../Config/router/routerC";
 
 const BrowserVersionError = (props: any) => {
     return (
@@ -21,7 +22,7 @@ const BrowserVersionError = (props: any) => {
                         type="primary"
                         key="return"
                         onClick={() => {
-                            props.history.replace(UrlPrefix + "/home")
+                            props.history.replace(homeURL(routerC_M))
                         }}
                     >
                         返回主页

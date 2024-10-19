@@ -11,7 +11,7 @@ import {withRouter} from "react-router";
 import {userLogoutTodo} from "../../Redux/Action/user";
 import UserAvatar from "../user/Avatar";
 import judgeAuth from "../../Utils/judgeAhtu";
-import {routerC_M} from "../../Config/router/routerC";
+import {homeURL, routerC_M} from "../../Config/router/routerC";
 import {UrlPrefix} from "../../Config/constValue";
 
 const {Header} = Layout;
@@ -51,10 +51,11 @@ class CHeader extends Component<any, any> {
         return (
             <Header className="site-layout-sub-header-background"
                     style={{position: 'fixed', zIndex: 1, width: '100%', display: "flex", justifyContent: "space-between"}}>
-                <div className="logo" style={{flex: "125px 0 0", marginTop: "-5px", marginLeft: "-10px"}} key={"logo"}>
-                    <img src={logo} style={{width: "125px", height: '30px'}}
-                         alt={"SDUOJ-logo"}/>
-                </div>
+                {/* HRZ: 删除导航栏上的LOGO */}
+                {/*<div className="logo" style={{flex: "125px 0 0", marginTop: "-5px", marginLeft: "-10px"}} key={"logo"}>*/}
+                {/*    <img src={logo} style={{width: "125px", height: '30px'}}*/}
+                {/*         alt={"SDUOJ-logo"}/>*/}
+                {/*</div>*/}
                 <div style={{minWidth: 0, flex: "auto"}}>
                     <Menu
                         mode="horizontal"
@@ -69,7 +70,6 @@ class CHeader extends Component<any, any> {
                                         <Link to={r.path}>{this.props.t(r.title_i18n)}</Link>
                                     </Menu.Item>
                                 )
-
                             })
                         }
                     </Menu>
@@ -117,7 +117,7 @@ class CHeader extends Component<any, any> {
                                                     onClick={()=>{
                                                         this.props.userLogout()
                                                         setTimeout(()=>{
-                                                            this.props.history.push(UrlPrefix + "/home")
+                                                            this.props.history.push(homeURL(routerC_M))
                                                         }, 200)
                                                         message.info("已退出登录")
                                                     }}
@@ -144,7 +144,7 @@ class CHeader extends Component<any, any> {
                                             <Space>
                                                 <Button type={"text"} onClick={()=>{
                                                     this.props.history.push(UrlPrefix + "/login?to=" + this.props.location.pathname)
-                                                }}>登录 / 注册</Button>
+                                                }}>登录</Button>
                                             </Space>
                                         </>
                                     )

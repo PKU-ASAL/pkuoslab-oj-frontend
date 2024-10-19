@@ -9,6 +9,7 @@ import {withTranslation} from "react-i18next";
 import {withRouter} from "react-router";
 import {useDispatch} from "react-redux";
 import {UrlPrefix} from "../../../Config/constValue";
+import {homeURL, routerC_M} from "../../../Config/router/routerC";
 
 const Binding = (props: any) => {
     const [form] = useForm()
@@ -30,7 +31,7 @@ const Binding = (props: any) => {
                 return CApi.thirdPartyBinding(values).then((res: any) => {
                     dispatch({type: "userLogin"})
                     dispatch({type: "setUserInfo", data: res})
-                    props.history.push(UrlPrefix + "/home")
+                    props.history.push(homeURL(routerC_M))
                     message.success('绑定成功');
                     return true;
                 })

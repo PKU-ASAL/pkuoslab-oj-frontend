@@ -6,6 +6,7 @@ import Login from "../../Component/user/Login";
 import {getUrlParams} from "../../Utils/getUrlParams";
 import {UrlPrefix} from "../../Config/constValue";
 import {message} from "antd";
+import {homeURL, routerC_M} from "../../Config/router/routerC";
 
 
 const CLogin = (props: any) => {
@@ -15,7 +16,7 @@ const CLogin = (props: any) => {
     useEffect(() => {
         if (isLogin === true) {
             let to = getUrlParams(props.location.search).to
-            if (to === undefined) props.history.replace(UrlPrefix + "/home")
+            if (to === undefined) props.history.replace(homeURL(routerC_M))
             else {
                 props.history.replace(to)
                 message.success(props.t("loginSuccessfully"))

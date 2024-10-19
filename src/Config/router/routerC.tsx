@@ -15,12 +15,12 @@ export const routerC: IBaseRouter[] = [
     //     exact: true,
     //     component: lazy(() => import('../../Pages/Client/CTest'))
     // },
-    {
-        id: 4,
-        path: UrlPrefix + "/home",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CHome'))
-    },
+    // {
+    //     id: 4,
+    //     path: UrlPrefix + "/home",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CHome'))
+    // },
     {
         id: 5,
         path: UrlPrefix + "/problem",
@@ -39,30 +39,30 @@ export const routerC: IBaseRouter[] = [
         exact: true,
         component: lazy(() => import('../../Pages/Client/CSubmissions'))
     },
-    {
-        id: 7,
-        path: UrlPrefix + "/contest",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CContest'))
-    },
-    {
-        id: 71,
-        path: UrlPrefix + "/contest/:contestId",
-        exact: false,
-        component: lazy(() => import('../../Pages/Client/CContestInfo'))
-    },
-    {
-        id: 8,
-        path: UrlPrefix + "/group",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CGroup'))
-    },
-    {
-        id: 81,
-        path: UrlPrefix + "/group/:groupId",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CGroupInfo'))
-    },
+    // {
+    //     id: 7,
+    //     path: UrlPrefix + "/contest",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CContest'))
+    // },
+    // {
+    //     id: 71,
+    //     path: UrlPrefix + "/contest/:contestId",
+    //     exact: false,
+    //     component: lazy(() => import('../../Pages/Client/CContestInfo'))
+    // },
+    // {
+    //     id: 8,
+    //     path: UrlPrefix + "/group",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CGroup'))
+    // },
+    // {
+    //     id: 81,
+    //     path: UrlPrefix + "/group/:groupId",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CGroupInfo'))
+    // },
     {
         id: 9,
         path: UrlPrefix + "/user",
@@ -75,24 +75,24 @@ export const routerC: IBaseRouter[] = [
         exact: true,
         component: lazy(() => import('../../Pages/Client/CResetPass'))
     },
-    {
-        id: 11,
-        path: UrlPrefix + "/thirdPartyLogin",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CThirdPartyLogin'))
-    },
-    {
-        id: 12,
-        path: UrlPrefix + "/problemSet/:problemSetId",
-        exact: false,
-        component: lazy(() => import("../../Component/problemSet/PSLayout"))
-    },
-    {
-        id: 13,
-        path: UrlPrefix + "/problemSetPublic/:problemSetId",
-        exact: true,
-        component: lazy(() => import("../../Component/problemSet/Public"))
-    },
+    // {
+    //     id: 11,
+    //     path: UrlPrefix + "/thirdPartyLogin",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CThirdPartyLogin'))
+    // },
+    // {
+    //     id: 12,
+    //     path: UrlPrefix + "/problemSet/:problemSetId",
+    //     exact: false,
+    //     component: lazy(() => import("../../Component/problemSet/PSLayout"))
+    // },
+    // {
+    //     id: 13,
+    //     path: UrlPrefix + "/problemSetPublic/:problemSetId",
+    //     exact: true,
+    //     component: lazy(() => import("../../Component/problemSet/Public"))
+    // },
     // {
     //     id: 7361,
     //     path: UrlPrefix + "/studentMutualEvaluation",
@@ -114,88 +114,90 @@ export const routerC: IBaseRouter[] = [
 ]
 
 export const router_ProblemSet: IBaseRouter[] = [
-    {
-        id: 13,
-        path: UrlPrefix + "/problemSet/:problemSetId/overview",
-        exact: true,
-        component: lazy(() => import("../../Component/problemSet/Overview"))
-    },
-    {
-        id: 14,
-        path: UrlPrefix + "/problemSet/:problemSetId/problem/:problemGroupId/:problemId",
-        exact: true,
-        component: lazy(() => import("../../Component/problemSet/Problem"))
-    },
-    {
-        id: 15,
-        path: UrlPrefix + "/problemSet/:problemSetId/rank",
-        exact: true,
-        component: lazy(() => import("../../Component/problemSet/Rank"))
-    },
-    {
-        id: 16,
-        path: UrlPrefix + "/problemSet/:problemSetId/review",
-        exact: true,
-        component: lazy(() => import("../../Component/problemSet/Review"))
-    },
-    {
-        id: 17,
-        path: UrlPrefix + "/problemSet/:problemSetId/submission",
-        exact: true,
-        component: lazy(() => import("../../Component/problemSet/Submission"))
-    },
+//     {
+//         id: 13,
+//         path: UrlPrefix + "/problemSet/:problemSetId/overview",
+//         exact: true,
+//         component: lazy(() => import("../../Component/problemSet/Overview"))
+//     },
+//     {
+//         id: 14,
+//         path: UrlPrefix + "/problemSet/:problemSetId/problem/:problemGroupId/:problemId",
+//         exact: true,
+//         component: lazy(() => import("../../Component/problemSet/Problem"))
+//     },
+//     {
+//         id: 15,
+//         path: UrlPrefix + "/problemSet/:problemSetId/rank",
+//         exact: true,
+//         component: lazy(() => import("../../Component/problemSet/Rank"))
+//     },
+//     {
+//         id: 16,
+//         path: UrlPrefix + "/problemSet/:problemSetId/review",
+//         exact: true,
+//         component: lazy(() => import("../../Component/problemSet/Review"))
+//     },
+//     {
+//         id: 17,
+//         path: UrlPrefix + "/problemSet/:problemSetId/submission",
+//         exact: true,
+//         component: lazy(() => import("../../Component/problemSet/Submission"))
+//     },
 ]
 
 export const routerC_Contest_M: IRouter[] = [
-    {
-        id: 1,
-        title_i18n: "Overview",
-        path: UrlPrefix + "/contest/:contestId/overview",
-        exact: true,
-        component: lazy(() => import("../../Component/contest/Overview"))
-    },
-    {
-        id: 2,
-        title_i18n: "Problem",
-        path: UrlPrefix + "/contest/:contestId/problem/:problemCode",
-        exact: true,
-        component: lazy(() => import("../../Component/contest/Problem"))
-    },
-    {
-        id: 3,
-        title_i18n: "Status",
-        path: UrlPrefix + "/contest/:contestId/submission",
-        exact: true,
-        component: lazy(() => import("../../Component/contest/Status"))
-    },
-    {
-        id: 4,
-        title_i18n: "Rank",
-        path: UrlPrefix + "/contest/:contestId/rank",
-        exact: true,
-        component: lazy(() => import("../../Component/contest/Rank"))
-    },
-    {
-        id: 5,
-        title_i18n: "Register",
-        path: UrlPrefix + "/contest/:contestId/register",
-        exact: true,
-        component: lazy(()=> import("../../Component/contest/Register"))
-    }
+    // {
+    //     id: 1,
+    //     title_i18n: "Overview",
+    //     path: UrlPrefix + "/contest/:contestId/overview",
+    //     exact: true,
+    //     component: lazy(() => import("../../Component/contest/Overview"))
+    // },
+    // {
+    //     id: 2,
+    //     title_i18n: "Problem",
+    //     path: UrlPrefix + "/contest/:contestId/problem/:problemCode",
+    //     exact: true,
+    //     component: lazy(() => import("../../Component/contest/Problem"))
+    // },
+    // {
+    //     id: 3,
+    //     title_i18n: "Status",
+    //     path: UrlPrefix + "/contest/:contestId/submission",
+    //     exact: true,
+    //     component: lazy(() => import("../../Component/contest/Status"))
+    // },
+    // {
+    //     id: 4,
+    //     title_i18n: "Rank",
+    //     path: UrlPrefix + "/contest/:contestId/rank",
+    //     exact: true,
+    //     component: lazy(() => import("../../Component/contest/Rank"))
+    // },
+    // {
+    //     id: 5,
+    //     title_i18n: "Register",
+    //     path: UrlPrefix + "/contest/:contestId/register",
+    //     exact: true,
+    //     component: lazy(()=> import("../../Component/contest/Register"))
+    // }
 ]
 
 // C 端目录
 export const routerC_M: IRouter[] = [
-    {
-        id: 1,
-        title_i18n: "Home",
-        path: UrlPrefix + "/home",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CHome'))
-    },
+    // {
+    //     id: 1,
+    //     title_i18n: "Home",
+    //     path: UrlPrefix + "/home",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CHome'))
+    // },
     {
         id: 2,
-        title_i18n: "Problem",
+        // HRZ: 修改导航栏显示的第一个标题
+        title_i18n: "OJInfo",
+        // title_i18n: "Problem",
         path: UrlPrefix + "/problem",
         exact: true,
         component: lazy(() => import('../../Pages/Client/CProblem'))
@@ -207,20 +209,20 @@ export const routerC_M: IRouter[] = [
         exact: true,
         component: lazy(() => import('../../Pages/Client/CSubmissions'))
     },
-    {
-        id: 4,
-        path: UrlPrefix + "/contest",
-        title_i18n: "Contest",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CContest'))
-    },
-    {
-        id: 5,
-        path: UrlPrefix + "/group",
-        title_i18n: "Group",
-        exact: true,
-        component: lazy(() => import('../../Pages/Client/CGroup'))
-    },
+    // {
+    //     id: 4,
+    //     path: UrlPrefix + "/contest",
+    //     title_i18n: "Contest",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CContest'))
+    // },
+    // {
+    //     id: 5,
+    //     path: UrlPrefix + "/group",
+    //     title_i18n: "Group",
+    //     exact: true,
+    //     component: lazy(() => import('../../Pages/Client/CGroup'))
+    // },
     // {
     //     id: 6,
     //     path: UrlPrefix + "/hws",
@@ -236,3 +238,11 @@ export const routerC_M: IRouter[] = [
     //     component: lazy(() => import('../../Pages/Exam/EList'))
     // },
 ]
+
+export const homeURL = (router: IRouter[]) => {
+    if (router.length > 0) {
+        return router[0].path;
+    } else {
+        return UrlPrefix + "/home";
+    }
+}

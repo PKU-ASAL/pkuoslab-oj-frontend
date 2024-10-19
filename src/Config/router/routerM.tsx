@@ -3,12 +3,12 @@ import {
     BuildOutlined,
     ContainerOutlined,
     FileOutlined,
-    FolderOpenOutlined,
+    // FolderOpenOutlined,
     LaptopOutlined,
-    MedicineBoxOutlined,
-    NotificationOutlined,
-    ReconciliationOutlined,
-    UsergroupAddOutlined,
+    // MedicineBoxOutlined,
+    // NotificationOutlined,
+    // ReconciliationOutlined,
+    // UsergroupAddOutlined,
     UserOutlined
 } from "@ant-design/icons";
 
@@ -49,22 +49,22 @@ export const routerM: IRouter[] = [
     //             icon: <Icon component={Task}/>,
     //             component: lazy(() => import('../../Pages/Manage/Problem/MObjective'))
     //         },
-    //         // {
-    //         //     id: 13,
-    //         //     path: UrlPrefix + "/manage/problem/subjective",
-    //         //     exact: true,
-    //         //     title_i18n: "主观题",
-    //         //     icon:  <Icon component={Task}/>,
-    //         //     component: lazy(() => import('../../Pages/Manage/Problem/MSubjective'))
-    //         // },
-    //         // {
-    //         //     id: 14,
-    //         //     path: UrlPrefix + "/manage/problem/review",
-    //         //     exact: true,
-    //         //     title_i18n: "题目批阅",
-    //         //     icon:  <Icon component={Task}/>,
-    //         //     component: lazy(() => import('../../Pages/Manage/Problem/MReview'))
-    //         // },
+    //         {
+    //             id: 13,
+    //             path: UrlPrefix + "/manage/problem/subjective",
+    //             exact: true,
+    //             title_i18n: "主观题",
+    //             icon:  <Icon component={Task}/>,
+    //             component: lazy(() => import('../../Pages/Manage/Problem/MSubjective'))
+    //         },
+    //         {
+    //             id: 14,
+    //             path: UrlPrefix + "/manage/problem/review",
+    //             exact: true,
+    //             title_i18n: "题目批阅",
+    //             icon:  <Icon component={Task}/>,
+    //             component: lazy(() => import('../../Pages/Manage/Problem/MReview'))
+    //         },
     //     ]
     // },
     {
@@ -135,40 +135,40 @@ export const routerM: IRouter[] = [
             },
         ]
     },
-    {
-        id: 9,
-        path: UrlPrefix + "/manage/problemSet",
-        title_i18n: "problemSetMod",
-        exact: false,
-        icon: <FolderOpenOutlined />,
-        children: [
-            {
-                id: 91,
-                path: UrlPrefix + "/manage/problemSet/problem_group",
-                exact: true,
-                title_i18n: "problemGroup",
-                icon: <MedicineBoxOutlined />,
-                component: lazy(() => import('../../Pages/Manage/MProblemGroup'))
-
-            },
-            {
-                id: 92,
-                path: UrlPrefix + "/manage/problemSet/problem_set",
-                exact: true,
-                title_i18n: "problemSet",
-                icon: <ReconciliationOutlined />,
-                component: lazy(() => import('../../Pages/Manage/MProblemSet')),
-            },
-        ]
-    },
-    {
-        id: 4,
-        path: UrlPrefix + "/manage/group",
-        title_i18n: "group",
-        exact: false,
-        icon: <UsergroupAddOutlined/>,
-        component: lazy(() => import('../../Pages/Manage/MGroup'))
-    },
+    // {
+    //     id: 9,
+    //     path: UrlPrefix + "/manage/problemSet",
+    //     title_i18n: "problemSetMod",
+    //     exact: false,
+    //     icon: <FolderOpenOutlined />,
+    //     children: [
+    //         {
+    //             id: 91,
+    //             path: UrlPrefix + "/manage/problemSet/problem_group",
+    //             exact: true,
+    //             title_i18n: "problemGroup",
+    //             icon: <MedicineBoxOutlined />,
+    //             component: lazy(() => import('../../Pages/Manage/MProblemGroup'))
+    //
+    //         },
+    //         {
+    //             id: 92,
+    //             path: UrlPrefix + "/manage/problemSet/problem_set",
+    //             exact: true,
+    //             title_i18n: "problemSet",
+    //             icon: <ReconciliationOutlined />,
+    //             component: lazy(() => import('../../Pages/Manage/MProblemSet')),
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 4,
+    //     path: UrlPrefix + "/manage/group",
+    //     title_i18n: "group",
+    //     exact: false,
+    //     icon: <UsergroupAddOutlined/>,
+    //     component: lazy(() => import('../../Pages/Manage/MGroup'))
+    // },
     // {
     //     id: 5,
     //     path: UrlPrefix + "/manage/exam",
@@ -177,14 +177,14 @@ export const routerM: IRouter[] = [
     //     icon: <ReadOutlined/>,
     //     component: lazy(() => import('../../Pages/Manage/MExam'))
     // },
-    {
-        id: 7,
-        path: UrlPrefix + "/manage/announcement",
-        title_i18n: "Announcement",
-        exact: true,
-        icon: <NotificationOutlined/>,
-        component: lazy(() => import('../../Pages/Manage/MAnnouncement'))
-    },
+    // {
+    //     id: 7,
+    //     path: UrlPrefix + "/manage/announcement",
+    //     title_i18n: "Announcement",
+    //     exact: true,
+    //     icon: <NotificationOutlined/>,
+    //     component: lazy(() => import('../../Pages/Manage/MAnnouncement'))
+    // },
 
     // {
     //     id: 8,

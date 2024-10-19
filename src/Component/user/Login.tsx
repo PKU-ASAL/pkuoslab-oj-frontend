@@ -18,7 +18,7 @@ type LoginType = 'SDUCAS' | 'account' | "email";
 const Login = (props: any) => {
 
     const formRef = useRef<ProFormInstance>()
-    const [loginType, setLoginType] = useState<LoginType>("SDUCAS")
+    const [loginType, setLoginType] = useState<LoginType>("account") // HRZ: 默认使用用户名密码登录，禁用邮箱认证和SDUCAS
     const {t} = props
     const dispatch = useDispatch()
     const afterLogin = (data: loginInfo) => {
@@ -47,7 +47,7 @@ const Login = (props: any) => {
                 formRef={formRef}
                 logo={Logo}
                 title={t("用户登录")}
-                subTitle={t("山东大学在线评测系统")}
+                subTitle={""/*HRZ:删除登录框上的提示符*/}
                 actions={
                     <></>
                 }
@@ -66,8 +66,10 @@ const Login = (props: any) => {
             >
                 <Tabs activeKey={loginType} onChange={(activeKey) => setLoginType(activeKey as LoginType)}>
                     <Tabs.TabPane key={'account'} tab={t('账号密码')}/>
-                    <Tabs.TabPane key={'email'} tab={t('邮箱验证码')}/>
-                    <Tabs.TabPane key={'SDUCAS'} tab={t('统一身份认证')}/>
+                    {/*HRZ:禁用邮箱登录*/}
+                    {/*<Tabs.TabPane key={'email'} tab={t('邮箱验证码')}/>*/}
+                    {/*HRZ:禁用SDUCAS登录*/}
+                    {/*<Tabs.TabPane key={'SDUCAS'} tab={t('统一身份认证')}/>*/}
                 </Tabs>
                 {loginType === 'account' && (
                     <>

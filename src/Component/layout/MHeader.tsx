@@ -17,10 +17,10 @@ class MHeader extends Component<any, any> {
             >
                 <div style={{float: "right"}}>
                     <div style={{position: "relative", right: "200px"}}>
-                        <Button type={"text"} onClick={()=>{
-                            this.props.history.replace("/manage")
-                            window.location.reload()
-                        }}>返回老版</Button>
+                        {/*<Button type={"text"} onClick={()=>{*/}
+                        {/*    this.props.history.replace("/manage")*/}
+                        {/*    window.location.reload()*/}
+                        {/*}}>返回老版</Button>*/}
                         <ChangeLang/>
                         {
                             (this.props.isLogin && (
