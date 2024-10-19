@@ -7,7 +7,7 @@ import {withTranslation} from "react-i18next";
 import {connect, useDispatch} from "react-redux";
 import {withRouter} from "react-router";
 import {loginInfo} from "../../Type/types";
-import Logo from "Assert/img/sduoj.png"
+import Logo from "Assert/img/pku-logo.png"
 import ForgetPass from "./Form/ForgetPass";
 import ItemEmail from "./Form/Item/ItemEmail";
 import CApi from "../../Utils/API/c-api";
@@ -45,7 +45,7 @@ const Login = (props: any) => {
             style={{width: "500px", textAlign: "center", margin: "0 auto"}}>
             <LoginForm
                 formRef={formRef}
-                logo={Logo}
+                /*logo = {Logo} HRZ: 删除logo*/
                 title={t("用户登录")}
                 subTitle={""/*HRZ:删除登录框上的提示符*/}
                 actions={
