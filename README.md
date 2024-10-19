@@ -1,11 +1,18 @@
-# SDUOJ Front End - React
+# PKUOSLAB-OJ Front End - React
 
-This response is a web system that use ``React`` to adapt more services of SDUOJ.
+This front end is powered by [SDUOJ](https://github.com/SDUOJ/sduoj-web2)
+
+This response is a web system that use ``React`` to adapt more services.
 
 This system is still in its early stages and there are still a large number of issues to be resolved.
 
 > Warning: This code currently contains a large number of unfixed warnings and has some performance issues, but is believed to be fixed in the future. (2023/02/19)
 
+## Hints for furture modification
+
+First, you should briefly know how JavaScript, React and HTML work.
+
+Then, you globally search the annotation `HRZ:`, which is marked by the author as comments, indicating that the following codes may influence the web layout, functionalities, or other things for customization.
 
 ## Prepare the environment
 
