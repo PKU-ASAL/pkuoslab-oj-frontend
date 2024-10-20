@@ -23,7 +23,7 @@ const ContestList = (props: any) => {
             <div className={"ListPage"}>
                 <TableWithPagination
                     useList={true}
-                    title={props.t("contestList")}
+                    title={props.t("HomeworkList") /* HRZ: 使用HomeworkList props.t("contestList")*/}
                     API={async (data: any) => {
                         return cApi.getContestList({...data, ...props.apiProp})
                     }}

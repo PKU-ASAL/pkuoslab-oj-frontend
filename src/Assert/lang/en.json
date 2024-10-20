@@ -326,5 +326,7 @@
   "PublicTestCaseInfo": "Public test case info",
   "new email": "New Email",
   "ShowAllInformation": "Show All Information",
-  "OJInfo": "Introduction to Computation (B) Online Judge"
+  "OJInfo": "Introduction to Computation (B) Online Judge",
+  "Homework": "Homework",
+  "HomeworkList": "Homework List"
 }

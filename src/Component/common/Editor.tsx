@@ -41,9 +41,7 @@ const CopiedButton = (props: any) => {
     )
 }
 
-const runHost = "https://oj.qd.sdu.edu.cn"
-const devHost = "https://oj.cs.sdu.edu.cn:3000"
-const host = process.env.NODE_ENV === 'development' ? devHost : runHost;
+const host = apiAddress().FRONT_SERVER;
 const Editor = (props: EditorProps & any) => {
 
     const [vditors, setVditors] = useState<any>(undefined)

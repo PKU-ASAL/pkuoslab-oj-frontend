@@ -15,7 +15,7 @@ export const routerC: IBaseRouter[] = [
     //     exact: true,
     //     component: lazy(() => import('../../Pages/Client/CTest'))
     // },
-    // {
+    // { /* HRZ: 禁用主页 */
     //     id: 4,
     //     path: UrlPrefix + "/home",
     //     exact: true,
@@ -39,19 +39,19 @@ export const routerC: IBaseRouter[] = [
         exact: true,
         component: lazy(() => import('../../Pages/Client/CSubmissions'))
     },
-    // {
-    //     id: 7,
-    //     path: UrlPrefix + "/contest",
-    //     exact: true,
-    //     component: lazy(() => import('../../Pages/Client/CContest'))
-    // },
-    // {
-    //     id: 71,
-    //     path: UrlPrefix + "/contest/:contestId",
-    //     exact: false,
-    //     component: lazy(() => import('../../Pages/Client/CContestInfo'))
-    // },
-    // {
+    {
+        id: 7,
+        path: UrlPrefix + "/contest",
+        exact: true,
+        component: lazy(() => import('../../Pages/Client/CContest'))
+    },
+    {
+        id: 71,
+        path: UrlPrefix + "/contest/:contestId",
+        exact: false,
+        component: lazy(() => import('../../Pages/Client/CContestInfo'))
+    },
+    // { /* HRZ:禁用用户组 */
     //     id: 8,
     //     path: UrlPrefix + "/group",
     //     exact: true,
@@ -147,41 +147,41 @@ export const router_ProblemSet: IBaseRouter[] = [
 ]
 
 export const routerC_Contest_M: IRouter[] = [
-    // {
-    //     id: 1,
-    //     title_i18n: "Overview",
-    //     path: UrlPrefix + "/contest/:contestId/overview",
-    //     exact: true,
-    //     component: lazy(() => import("../../Component/contest/Overview"))
-    // },
-    // {
-    //     id: 2,
-    //     title_i18n: "Problem",
-    //     path: UrlPrefix + "/contest/:contestId/problem/:problemCode",
-    //     exact: true,
-    //     component: lazy(() => import("../../Component/contest/Problem"))
-    // },
-    // {
-    //     id: 3,
-    //     title_i18n: "Status",
-    //     path: UrlPrefix + "/contest/:contestId/submission",
-    //     exact: true,
-    //     component: lazy(() => import("../../Component/contest/Status"))
-    // },
-    // {
-    //     id: 4,
-    //     title_i18n: "Rank",
-    //     path: UrlPrefix + "/contest/:contestId/rank",
-    //     exact: true,
-    //     component: lazy(() => import("../../Component/contest/Rank"))
-    // },
-    // {
-    //     id: 5,
-    //     title_i18n: "Register",
-    //     path: UrlPrefix + "/contest/:contestId/register",
-    //     exact: true,
-    //     component: lazy(()=> import("../../Component/contest/Register"))
-    // }
+    {
+        id: 1,
+        title_i18n: "Overview",
+        path: UrlPrefix + "/contest/:contestId/overview",
+        exact: true,
+        component: lazy(() => import("../../Component/contest/Overview"))
+    },
+    {
+        id: 2,
+        title_i18n: "Problem",
+        path: UrlPrefix + "/contest/:contestId/problem/:problemCode",
+        exact: true,
+        component: lazy(() => import("../../Component/contest/Problem"))
+    },
+    {
+        id: 3,
+        title_i18n: "Status",
+        path: UrlPrefix + "/contest/:contestId/submission",
+        exact: true,
+        component: lazy(() => import("../../Component/contest/Status"))
+    },
+    {
+        id: 4,
+        title_i18n: "Rank",
+        path: UrlPrefix + "/contest/:contestId/rank",
+        exact: true,
+        component: lazy(() => import("../../Component/contest/Rank"))
+    },
+    {
+        id: 5,
+        title_i18n: "Register",
+        path: UrlPrefix + "/contest/:contestId/register",
+        exact: true,
+        component: lazy(()=> import("../../Component/contest/Register"))
+    }
 ]
 
 // C 端目录
@@ -195,9 +195,8 @@ export const routerC_M: IRouter[] = [
     // },
     {
         id: 2,
-        // HRZ: 修改导航栏显示的第一个标题
         title_i18n: "OJInfo",
-        // title_i18n: "Problem",
+        // title_i18n: "Problem" // HRZ: 修改导航栏显示的第一个标题,
         path: UrlPrefix + "/problem",
         exact: true,
         component: lazy(() => import('../../Pages/Client/CProblem'))
@@ -209,14 +208,15 @@ export const routerC_M: IRouter[] = [
         exact: true,
         component: lazy(() => import('../../Pages/Client/CSubmissions'))
     },
-    // {
-    //     id: 4,
-    //     path: UrlPrefix + "/contest",
-    //     title_i18n: "Contest",
-    //     exact: true,
-    //     component: lazy(() => import('../../Pages/Client/CContest'))
-    // },
-    // {
+    {
+        id: 4,
+        path: UrlPrefix + "/contest",
+        title_i18n: "Homework",
+        // title_i18n: "Contest" // HRZ: 修改比赛为作业
+        exact: true,
+        component: lazy(() => import('../../Pages/Client/CContest'))
+    },
+    // { /* HRZ: 禁用用户组 */
     //     id: 5,
     //     path: UrlPrefix + "/group",
     //     title_i18n: "Group",

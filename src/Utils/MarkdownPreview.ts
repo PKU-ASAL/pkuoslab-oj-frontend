@@ -3,9 +3,6 @@ import VditorPreview from 'vditor/dist/method.min'
 import {isValueEmpty} from "./empty";
 import apiAddress from "./API/apiAddress";
 
-// const runHost = apiAddress().CLIENT_SERVER // "https://oj.qd.sdu.edu.cn"
-// const devHost = "https://oj.cs.sdu.edu.cn:3000"
-// const host = process.env.NODE_ENV === 'development' ? devHost : runHost;
 const host = apiAddress().FRONT_SERVER;
 
 export function MarkdownPreview(code: string | null | undefined, id: string) {

@@ -159,10 +159,12 @@ const ProblemAddBody = (props: ProblemAddBodyType & any) => {
     const ProblemType = props.problemType
     const strMatch = (value?: string) => {
         if (value === undefined) return null
-        if (ProblemType === "single" || ProblemType === "multi")
-            return value.match(/SDUOJ-C-[0-9]{4}$/)
-        if (ProblemType === "program")
-            return value.match(/SDUOJ-[0-9]{4}$/)
+        /* HRZ: 匹配任意形如XXX-YYY的problemCode */
+        return value.match(/^[a-zA-Z]+-\d+$/)
+        // if (ProblemType === "single" || ProblemType === "multi")
+        //     return value.match(/SDUOJ-C-[0-9]{4}$/)
+        // if (ProblemType === "program")
+        //     return value.match(/SDUOJ-[0-9]{4}$/)
     }
 
     // 获取题目描述信息
@@ -195,7 +197,7 @@ const ProblemAddBody = (props: ProblemAddBodyType & any) => {
     }
 
     const getProblemInfo = async (problemCode: string) => {
-        // console.log("getProblemInfo", TableData, problemCode, rowID)
+        // console.log("getProblemInfo", TableData, problemCode)
         if (problemCode === undefined) return Promise.reject("此项为必填项")
         if (strMatch(problemCode) !== null) {
             // Cache 命中直接返回
@@ -292,6 +294,7 @@ const ProblemAddBody = (props: ProblemAddBodyType & any) => {
                 return false
             }
         }]
+
     const ProblemCodeColumnItem: ProColumns[] = [
         {
             title: "题目编号",

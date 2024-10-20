@@ -19,13 +19,13 @@ export interface IRouter extends IBaseRouter {
 
 // 名称，是否为独立页面
 const routerCLayoutData: any = [
-    // ["home", false],
-    ["problem", false],
-    // ["contest", false],
+    // ["home", false], // HRZ：首页
+    ["problem", false], // HRZ: 题目
+    ["contest", false], // HRZ： 比赛
     // ["problemSet", false],
     // ["problemSetPublic", false],
     ["submission", false],
-    // ["group", false],
+    // ["group", false], // HRZ：用户组
     // 用户信息页面
     ["user", true],
     // 账户相关的单独页面
